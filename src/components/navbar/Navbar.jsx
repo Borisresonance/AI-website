@@ -26,7 +26,7 @@ function Navbar() {
         <div className='gpt3__navbar-links_container'>
           <Menu />
         </div>
-      </div>
+      </div>          
       <div className='gpt3__navbar-sign'>
         <p>Sign in</p>
         <button type='button'>Sign up</button>
@@ -36,18 +36,21 @@ function Navbar() {
         ?<RiCloseLine color ="#fff" size={27} onClick={() => setToggleMenu(false)} />
         :<RiMenu3Line color ="#fff" size={27} onClick={() =>setToggleMenu(true)}/>
         } 
-        {toggleMenu && (
-          <div className='gpt3_navbar-menu_container scale-up-center'>
+        {toggleMenu && (  
+          <div className='gpt3__navbar-menu_container scale-up-center'>
             <div className='gpt3__navbar-menu_container-links'>
-              <Menu />
-              <div className='gpt3__navbar-menu_container-links-sign'>
+              <p><a href="#home">Home</a></p>
+              <p><a href="#wgpt3">What is GPT3?</a></p>
+              <p><a href="#possibility">Open AI</a></p>
+              <p><a href="#features">Case Studies</a></p>
+              <p><a href="#blog">Library</a></p>
+            </div>
+            <div className='gpt3__navbar-menu_container-links-sign'>
               <p>Sign in</p>
               <button type='button'>Sign up</button>
-      </div>
             </div>
           </div>
-        )
-        }
+        )}
       </div>
     </div>
   )
